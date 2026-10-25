@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serpente</title>
+    <style>
+      html, body { height: 100%; margin: 0; background: #10120e; color: #f4f1ea; font-family: ui-sans-serif, system-ui, sans-serif; }
+      main { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+      canvas { background: #070806; border: 1px solid #2a2e24; border-radius: 12px; touch-action: none; }
+      p { margin: 0; font-family: ui-monospace, monospace; font-size: 13px; color: #c4a574; }
+      .pad { display: grid; grid-template-columns: repeat(3, 52px); gap: 6px; }
+      button { height: 48px; border-radius: 10px; border: 1px solid #3a3f32; background: #1c2018; color: #f4f1ea; font-size: 16px; }
+      .pad button:nth-child(1) { grid-column: 2; }
+      .pad button:nth-child(2) { grid-column: 1; grid-row: 2; }
+      .pad button:nth-child(3) { grid-column: 2; grid-row: 2; }
+      .pad button:nth-child(4) { grid-column: 3; grid-row: 2; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p id="score">punti 0</p>
+      <canvas id="c" width="320" height="320"></canvas>
+      <div class="pad">
+        <button type="button" data-d="0,-1">↑</button>
+        <button type="button" data-d="-1,0">←</button>
+        <button type="button" data-d="0,1">↓</button>
+        <button type="button" data-d="1,0">→</button>
+      </div>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>

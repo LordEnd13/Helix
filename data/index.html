@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Helix</title>
+    <link rel="stylesheet" href="style.css?v=18" />
+  </head>
+  <body>
+    <div id="helix-root">
+      <header class="topbar">
+        <div class="brand">
+          <button id="logo" type="button" class="logo" aria-label="Helix">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <path fill="currentColor" d="M6.2 4.2h5.2v9.1h9.2V4.2h5.2v23.6h-5.2v-9.3h-9.2v9.3H6.2V4.2z"/>
+            </svg>
+          </button>
+          <span id="wordmark" class="wordmark">Helix</span>
+        </div>
+        <div class="task-center">
+          <nav id="dock" class="dock"></nav>
+          <div id="minis"></div>
+        </div>
+        <div class="task-meta">
+          <time id="clock" class="clock">--:--</time>
+          <div id="pill" class="pill">avvio</div>
+        </div>
+      </header>
+      <div id="desk" class="desk"></div>
+      <div id="toasts" class="toasts"></div>
+      <div id="lock" class="lock" hidden></div>
+    </div>
+    <script src="kernel.js?v=18"></script>
+  </body>
+</html>

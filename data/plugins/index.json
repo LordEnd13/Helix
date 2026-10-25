@@ -1,0 +1,23 @@
+[
+  "monitor.js",
+  "files.js",
+  "terminal.js",
+  "gpio.js",
+  "wifi.js",
+  "library.js",
+  "settings.js",
+  "notes.js",
+  "calc.js",
+  "clock.js",
+  "tris.js",
+  "code.js",
+  "pdf.js",
+  "scope.js",
+  "tester.js",
+  "uart.js",
+  "netscan.js",
+  "router.js",
+  "radio.js",
+  "espnow.js",
+  "script.js"
+]

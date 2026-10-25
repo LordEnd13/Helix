@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orologio</title>
+    <style>
+      html, body { height: 100%; margin: 0; background: #12140f; color: #f4f1ea; font-family: ui-sans-serif, system-ui, sans-serif; }
+      main { height: 100%; display: grid; place-items: center; text-align: center; }
+      time { font-variant-numeric: tabular-nums; font-size: clamp(48px, 14vw, 96px); letter-spacing: -0.04em; }
+      p { margin: 8px 0 0; color: #c4a574; font-family: ui-monospace, monospace; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <time id="t">--:--:--</time>
+        <p id="d"></p>
+      </div>
+    </main>
+    <script>
+      const t = document.getElementById("t");
+      const d = document.getElementById("d");
+      const tick = () => {
+        const n = new Date();
+        t.textContent = n.toLocaleTimeString("it-IT");
+        d.textContent = n.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
+      };
+      tick();
+      setInterval(tick, 250);
+    </script>
+  </body>
+</html>
